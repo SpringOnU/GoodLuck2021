@@ -1,0 +1,77 @@
+*{
+	padding: 3px;
+	margin: 2px; 
+}
+
+.head {
+	height: 60px;
+	width: 1500px;
+}
+
+.nav{
+	height: 60px;
+	float: left;
+	display: inline-block;
+}
+
+td {
+	width: 80px;
+}
+
+.left{
+	float: right;
+	display: inline-block;
+}
+
+.blue{
+	height: 40px;
+	width: 70px;
+	background-color: blue;
+	color: white;
+	border-radius: 10%;
+}
+
+.body{
+	text-align: center;
+	width: 1500px;
+	height: 600px;
+}
+
+.img{
+	line-height: 276px;
+	align: center;
+	display: inline-block;
+	width: 276px;
+	height: 98px;
+}
+
+input{
+	width: 500px;
+	height: 30px;
+	display: inline-block;
+}
+.baidu{
+	width: 80px;
+	height: 34px;
+	display: inline-block;
+	background-color: blue;
+	position: relative;
+	top: 2.5px;
+	left: -65px;
+	color: white;
+	text-align: center;
+	line-height: 34px;
+}
+
+.photo{
+	width: 40px;
+	height: 34px;
+	position: relative;
+	top:17px;
+	left: -60px;
+	display: inline-block;
+}
+
+.hot{
+	text-align: center;
+}

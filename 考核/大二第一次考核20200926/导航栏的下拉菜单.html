@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下拉菜单</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .nav li {
+            float: left;
+            width: 100px;
+            list-style: none;
+            background-color: #fff;
+            border: 1px solid black;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-right: -1px;
+        }
+        
+        .nav li a {
+            text-decoration: none;
+            text-align: center;
+            color: black;
+        }
+        
+        .nav li ul {
+            border: 1px solid #000;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="nav">
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li>私信</li>
+                    <li>评论</li>
+                    <li>@我</li>
+                    <li>weixin</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">热点</a>
+                <ul>
+                    <li>私信</li>
+                    <li>评论</li>
+                    <li>@我</li>
+                    <li>weixin</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">视频</a>
+                <ul>
+                    <li>私信</li>
+                    <li>评论</li>
+                    <li>@我</li>
+                    <li>weixin</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">音乐</a>
+                <ul>
+                    <li>私信</li>
+                    <li>评论</li>
+                    <li>@我</li>
+                    <li>weixin</li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </div>
+    <div style="clear: both;"></div>
+    <script>
+        var nav = document.querySelector(".nav");
+        var lis = nav.children;
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function() {
+                this.children[1].style.display = "block";
+            }
+        }
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onmouseout = function() {
+                this.children[1].style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+*{
+	margin: 5px;
+	padding: 0px;
+}
+
+
+table {
+	align: center;
+	font-size: 20px;
+	border: 1px solid #000;
+}
+
+ td{
+	border:1px solid #000; 
+	height: 50px;
+	width: 60px;
+	text-align: center;
+}
+
+.down{
+	position: relative;
+	top: -10px;
+	display: none;
+}
+
+.nav{
+	position: relative;
+	left: 22px;
+}
+
+.block{
+	display: inline-block;
+}
+
+.none{
+	display: none;
+}
