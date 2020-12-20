@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?7kkyc2');
+    src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:hover{
+    color: #e33333;
+}
+
+/*去掉列表前面的小点*/
+li {
+    list-style: none;
+}
+
+/*让所有斜体 不倾斜*/
+em,
+i {
+    font-style: normal;
+}
+
+/*让button 按钮 变成小手*/
+button {
+    cursor: pointer;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.fr .icomoon {
+	font-family: 'icomoon';
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.style-red {
+	color: #c81623;
+}
+
+.spacer {
+	width: 1px;
+	height: 12px;
+	background-color: #666;
+	margin: 9px 12px 0;
+}
+
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.top {
+    height: 31px;
+	background-color: #f1f1f1;
+    line-height: 31px;
+    font-size: 12px;
+    color: #666;
+    display: block;
+}
+
+/*让列表横向排列*/
+.top li {
+	float: left;
+}
+
+/*head区域*/
+.head {
+    background-color: red;
+    height: 200px;
+}
+
+.logo{
+    display: block;
+	/*overflow: hidden;*/
+	width: 175px;
+	height: 56px;
+    background: url(../品优购/img/logo.png) no-repeat;
+	/*text-indent: -999px;*/
+	font-size: 0;
+}
+

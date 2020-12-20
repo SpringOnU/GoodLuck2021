@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>DOM事件</title>
+ <meta charset="utf-8">
+  <script type="text/javascript">
+   var num=1,
+    max=10,
+    timer=null;  //释放内存
+    //每隔一秒钟number递增一次，直到num的值=max清除。
+   timer=setInterval(function(){
+    num++;
+    if(num>=max){
+     clearInterval(timer);
+    }
+    console.log(num);
+   },1000);
+  </script>
+
+</body>
+</html>

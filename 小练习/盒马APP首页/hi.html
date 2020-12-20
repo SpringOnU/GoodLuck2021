@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>盒马</title>
+	<style type="text/css">
+	body{
+		background-color:#ededed;
+		width: 402px;
+		margin: 0;
+		padding: 0;
+
+	}
+		.head{
+			margin: 0px;
+			height: 77px;
+			width: 402px;
+			background-color: #1cc4ff;
+		}
+		.first{
+			padding: 0px;
+			margin: 0px;
+			text-align: center;
+			width: 402px;
+		}
+		.one{
+			float: left;
+		}
+		.two{
+			background-color: white;
+			height: 25px;
+			width: 200px;
+			margin: 5px 50px 5px 40px;
+			padding: -4px 0 3px 0;
+			position: absolute;
+			left: 0px;
+		}
+		.three{
+			float: right;
+		}
+		table tr td img,img{
+			border-radius: 50%;
+		}
+		.big{
+			font-size: 20px;
+			font-family: 黑体;
+		}
+		.small{
+			font-size: 10px;
+			font-family: 黑体;
+		}
+		
+		.red{
+			background-color: #fceced;
+			border:1px red solid;
+			
+			float: left;
+		}
+		.white{
+			background-color: red;
+			border:1px red solid;
+			float: left;
+		}
+		.black{
+			font-family: 黑体;
+			width: 402px;
+		}
+		.grey{
+			border:1px grey solid;
+			
+		}
+		.shop{
+			float: right;
+		}
+		.hang{
+			display: inline-block;
+		}
+		.log{
+			position:fixed;
+ 			top: 89%;
+ 			left:0px;
+			background: rgba(0, 0, 0, 0.5);
+			width: 402px;
+			height: 28px;
+		}
+		.log1{
+			line-height: 28px;
+			float: left;
+			display: inline-block;
+		}
+		.log2{
+			height: 15px;
+			width: 70px;
+			background-color: #09aefd;
+			float:right;
+			font-size: 13px;
+			margin-right: 8px;
+			margin-top:3px;
+			border-radius: 15%;
+			line-height: 16px;
+			text-align: center;
+		}
+		.left{
+			align-items:stretch;
+		}
+		.con{
+			
+ 			width: 402px;
+ 			position:fixed;
+ 			top: 92%;
+ 			left:0px;
+			background-color: white;
+			font-size: 12px;
+		}
+	  a:link{text-decoration:none; color: black;}
+      a:visited{color: #10aaff;}
+      a:hover{color: #10aaff;}
+      a:active{color: #10aaff;}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<form>
+			<img src="img\1.png" style="vertical-align : bottom"/>
+			<div class="first">
+				<span class="one">
+					<a href="#">
+						<img src="img\2.png" height="35px" />
+					</a>
+				</span>
+				<span class="two">
+					<img src="img\2+.png" height="20px" width="20px" style="vertical-align:bottom"/>
+					<input type="text" name="search" placeholder="电子卡"  style="border-style:none"/ >
+				</span>
+				<span class="three">
+					<a href="#">
+						<img src="img\3.png"/>
+					</a>
+				</span>
+			</div>
+		</form>
+	</div>
+
+	<table width="402px">
+		<tr align="center">
+			<td><a href="#"><img src="img\4.png" width="70px"></a></td>
+			<td><a href="#"><img src="img\5.png" width="70px"></a></td>
+			<td><a href="#"><img src="img\6.png" width="70px"></a></td>
+			<td><a href="#"><img src="img\7.png" width="70px"></a></td>
+			<td><a href="#"><img src="img\8.png" width="70px"></a></td>
+		</tr>
+		<tr align="center">
+			<td><a href="#">水果蔬菜</a></td>
+			<td><a href="#">肉禽蛋品</a></td>
+			<td><a href="#">海鲜水产</a></td>
+			<td><a href="#">速食冷冻</a></td>
+			<td><a href="#">粮油食品</a></td>
+		</tr>
+	</table>
+
+	<table width="100%">
+		<tr>
+			<td bgcolor="white" align="center">
+			<a href="#">
+				<table width="50%">
+					<tr>
+						<td colspan="2" class="big">吃好点</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="small"><font color="#979797">宅在家 也要吃好点</font></td>
+					</tr>
+					<tr align="center">
+						<td><img src="img\9.png" width="80px"></td>
+						<td><img src="img\10.png" width="80px"></td>
+					</tr>
+				</table>
+				</a>
+			</td>
+
+			<td bgcolor="white" align="center">
+			<a href="#">
+				<table width="50%">
+					<tr>
+						<td colspan="2" class="big">产地量贩</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="small"><font color="#979797">基地水果 全国发售</font></td>
+					</tr>
+					<tr align="center">
+						<td><img src="img\11.png" width="80px"></td>
+						<td><img src="img\12.png" width="80px"></td>
+					</tr>
+				</table>
+				</a>
+			</td>
+		</tr>
+	</table>
+
+	<table width="100%">
+		<tr align="center">
+			<td>
+				<a href="#">
+					<span class="big">
+						全部
+					</span>
+					<br/>
+					<span>
+						<font size="1px">
+							换行标签
+						</font>
+					</span>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+					<span class="big">
+						时令
+					</span>
+					<br/>
+					<span>
+						<font size="1px">
+							当季优选
+						</font>
+					</span>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+					<span class="big">
+						进口
+					</span>
+					<br/>
+					<span>
+						<font size="1px">
+							国际直采
+						</font>
+					</span>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+					<span class="big">
+						人气
+					</span>
+					<br/>
+					<span>
+						<font size="1px">
+							大家在买
+						</font>
+					</span>
+				</a>
+			</td>
+		</tr>
+	</table>
+
+
+	<table class="black" width="100%" >
+		<tr bgcolor="white" class="fan">
+			<td><a href="#"><img src="img\13.png" width="80px"></a></td>
+			<td>
+			<a href="#">
+				<div style="margin:4px 0 0 0;">
+					山东烟台红富士苹果 2.5kg(果径80...)
+					<br/>
+					山东烟台... 2.... 80(含)—85mm...
+					<br/>
+				</div>
+			</a>
+				<div class="left" style="margin:6px 0 0px 0;">
+					<span class="white"><font size="1.8px"><font color="white">返</font></font></span>
+					<span class="red"><font size="1.8px"><font color="red"> 最高￥3.99元 </font></font></span>&nbsp;<span class="grey"><font size="1.8px"><font color="grey"> 商家24H发货 </font></font></span>
+				</div>
+				<br/>
+				<div style="margin:0px 0 7px 0;" class="hang">
+				<span><font color="red"><font size="4px">￥39.9</font></font></span><font size="1.7px"><font color="grey">/箱</font></font>
+				<br/>
+				<font size="2px"><font color="grey">1800+人已买过</font></font>
+				</div>
+				<a href="#"><img src="img\19.png" width="40px" class="shop" /></a>
+			</td>
+		</tr>
+
+		<tr bgcolor="white" >
+			<td><a href="#"><img src="img\11.png" width="80px"></a></td>
+			<td>
+			<a href="#">
+				<div style="margin:4px 0 0 0;">
+					广西荔浦芋头 2.5kg
+					<br/>
+					芋艿
+					<br/>
+				</div>
+				</a>
+				<div class="left" style="margin:6px 0 0px 0;">
+					<span class="white"><font size="1.8px"><font color="white">返</font></font></span>
+					<span class="red"><font size="1.8px"><font color="red"> 最高￥2.99元 </font></font></span>&nbsp;<span class="grey"><font size="1.8px"><font color="grey"> 商家24H发货 </font></font></span>
+				</div>
+				<br/>
+				<div style="margin:0px 0 7px 0;" class="hang">
+				<span><font color="red"><font size="4px">￥29.9</font></font></span><font size="1.7px"><font color="grey">/箱</font></font>
+				<br/>
+				
+				</div>
+				<a href="#"><img src="img\19.png" width="40px" class="shop" /></a>
+			</td>
+		</tr>
+
+		<tr bgcolor="white">
+			<td><a href="#"><img src="img\12.png" width="80px"></a></td>
+			<td>
+			<a href="#">
+				<div style="margin:4px 0 0 0;">
+					四川浦江不知火丑橘 2.5kg （单果1...）
+					<br/>
+					不知火柑（丑柑） 
+					<br/>
+				</div>
+				</a>
+				<div class="left" style="margin:6px 0 0px 0;">
+					<span class="white"><font size="1.8px"><font color="white">返</font></font></span>
+					<span class="red"><font size="1.8px"><font color="red"> 最高￥3.99元 </font></font></span>&nbsp;<span class="grey"><font size="1.8px"><font color="grey"> 商家24H发货 </font></font></span>
+				</div>
+				<br/>
+				<div style="margin:0px 0 7px 0;" class="hang">
+				<span><font color="red"><font size="4px">￥39.9</font></font></span><font size="1.7px"><font color="grey">/箱</font></font>
+			
+				</div>
+				<a href="#"><img src="img\19.png" width="40px" class="shop" /></a>
+			</td>
+		</tr>
+	</table>
+
+	<div class="log">
+ 		<div class="log1"><font color="white">登录盒马APP,开启鲜美生活</font></div>
+ 		<div class="log2"><font color="white"> 立即登录</font></div>
+		
+	</div>
+
+	<div  class="con">
+	<table width="100%"  cellspacing="2px">
+		<tr align="center">
+			<td rowspan="2" height="4px"><a href="#"><img src="img\14.png" width="40px"></a></td>
+			<td><a href="#"><img src="img\15.png" width="40px"></a></td>
+			<td><a href="#"><img src="img\16.png" width="30px"></a></td>
+			<td><a href="#"><img src="img\17.png" width="40px"></a></td>
+			<td><a href="#"><img src="img\18.png" width="30px"></a></td>
+		</tr>
+		<tr align="center">
+			<td>分类</td>
+			<td>盒区生活</td>
+			<td>购物车</td>
+			<td>我的</td>
+		</tr>
+	</table>
+	</div>
+
+</body>
+</html>

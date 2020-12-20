@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+ 
+    <script defer>
+ 
+        function test(num) {
+//            判断一串字符是不是全部是数字
+            var rex = /^[0-9]+$/;//正则表达式
+            var flag = rex.test(num);//通过表达式进r行匹配
+            var fin = num.match(rex);
+            if (flag) {
+                alert(fin+"：数据类型合法");
+            } else {
+                alert("数据类型不合法");
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="in">
+<button onclick="test(document.getElementById('in').value)">进行数据判断</button>
+</body>
+</html>

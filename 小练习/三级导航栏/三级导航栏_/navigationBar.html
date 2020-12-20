@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>三级导航栏</title>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="navigationBar.css">
+</head>
+<body>
+<form id="form" name="form">
+	<div class="all" id="all">
+		<div class="menu-1" id="menu-1">
+			<div class="main">主页</div>
+			<a href="#"><div class="blog active" id="blog">博客首页 ></div></a>
+			<a href="#"><div class="video" id="video">视频教程 ></div></a>
+			<a href="#"><div class="log2 none" id="log2">用户：</div></a>
+			
+
+					<div class="log" id="log">
+						<b><p id="loging" style="font-size:20px;">账号登录</p></b>
+						 <span id="account">用户：</span><input type="text" name="log" id="name"><br/>
+						 <span id="number">密码：</span><input type="text" name="key" id="key">
+						<input type="button" name="submit" class="submit" value="登录" id="submit">
+						<p class="logon" id="logon"><a href="#">没有账号？立即注册</a></p>
+					</div>
+
+
+		</div>
+
+		<div class="menu-2" id="menu-2">
+			<div class="title" id="title"><p class="p" id="p">博客首页</p></div>
+			<a href="#"><div class="s-title title1 active2" id="title1">热门推荐</div></a>
+			<a href="#"><div class="s-title title2" id="title2">博客分类</div></a>
+			<a href="#"><div class="s-title title3" id="title3">优秀案例</div></a>
+		</div>
+			
+
+		<div class="menu-3" id="menu-3">
+			<div class="content block" id="box1">
+				<div class="plog">
+					<a href="https://weibo.com/u/3412668714">
+					<img src="./img/bloger1.jpg" style="width:100px; height:100px;"/>
+					<div class="interview">
+						<span>ID:小武拉莫</span>
+						<p style="height:30px;">简介:知名摄影博主</p><p style="height:30px;">关注:627  粉丝:132万 微博:320</p>
+					</div>
+					<img src="./img/wb1.png" style="width:400px; height:360px;" class="wb1" />
+					</a>
+				</div>
+
+				
+				<div class="vlog">
+					<a href="https://weibo.com/u/1724164455" class="a">
+						<img src="./img/bloger2.jpg" style="width:100px; height:100px;" class="ph1" />
+						<div class="interview2">
+							<span>ID:孔维w</span>
+							<p style="height:30px;">简介:不来也不去</p><p style="height:30px;">关注:407 粉丝:142万 微博:721</p>
+						</div>
+						<img src="./img/wb2.png" style="width:400px; height:360px;" class="wb2" />
+					</a>
+				</div>
+				
+			</div>
+
+
+			<div class="content none" id="box2">
+					<div class="left">
+						<a href="#">
+							<div class="backBox backBox1">
+								微电影
+								<p class="small">87983+人订购</p>
+							</div>
+						</a>
+						<a href="#">
+							<div class="backBox backBox1">
+								记录片
+								<p class="small">99205+人订购</p>
+							</div>
+						</a>
+					</div>
+					<div class="right">
+						<a href="#">
+							<div class="backBox backBox1">
+								动漫
+								<p class="small">77611+人订购</p>
+							</div>
+						</a>
+						<a href="#">
+							<div class="backBox backBox1">
+								音乐
+								<p class="small">68634+人订购</p>
+							</div>
+						</a>
+					</div>
+			</div>
+
+			<div class="content none" id="box3">
+				<div class="hot">热度排行榜TOP3</div>
+				<div class="tip">由近十天视频播放、下载、收藏总量选出~</div>
+				<a href="#">
+					<div class="top1">
+					<img src="./img/top1.jpg" class="top11" />
+					<div class="name red">TOP1</div>
+					<div class="name">如果国宝会说话 第二季</div>
+					<div class="intro">简介：《如果国宝会说话》的摄制组足迹遍布全国，拍摄了近百家博物馆和考古研究所，50余处考古遗址。纪录片没有渲染猎奇和神秘的曲折表述，也避免了高冷的学术性叙事。在每集5分钟的时间里，文 物用通俗易懂的语言与观众平等对话，诉说发生在自己身上的传奇。</div>
+				</div>
+				</a>
+				
+				<a href="#">
+					<div class="top2">
+					<img src="./img/top2.jpg" class="top12" />
+					<div class="name red">TOP2</div>
+					<div class="name">航拍中国 第三季</div>
+					<div class="intro">简介：《航拍中国》第三季通过宏观和微观相结合的空中拍摄角度，全方位展示各省自然地理风貌、历史人文景观及经济社会发展，全景式俯瞰一个观众既熟悉又新鲜的美丽中国、生态中国、文明中国。第三季选取了云南、安徽、贵州等十个省市自治区，力求把精美的画面和更关注人文的态度传递给大家。</div>
+				</div>
+				</a>
+
+				<a href="#">
+					<div class="top3">
+					<img src="./img/top3.jpg" class="top13" />
+					<div class="name red">TOP3</div>
+					<div class="name">小主安康－宠物医院2 </div>
+					<div class="intro">简介：节目将视角聚焦于宠物医院，通过最真实的记录，呈现发生在医院内外形形色色的事件。与第一季不同的是，在第二季中，还会有更多异宠有趣故事、更多干货知识分享、更加真实深入体验、更全方位拍摄呈现，节目的拍摄场所也将打破医院的局限性，我们会走入百姓生活中，探访动物组织机构。</div>
+				</div>
+				</a>
+			</div>
+
+			<div class="content none" id="box4">
+				<img src="./img/b.jpg" class="background">
+				<a href="#">
+					<div class="banner" id="banner">
+					<img src="./img/v1.png" class="slide">
+					<img src="./img/v2.png" class="slide">
+					<img src="./img/v3.png" class="slide">
+				</div>
+				</a>
+				<img src="./img/arrow.png"  class="button prev"  id="prev">
+				<img src="./img/arrow.png"  class="button next"   id="next">
+
+
+			</div>
+			<div class="content none" id="box5">
+				<a href="#"><img src="./img/pic5.png" class="pic5"></a>
+			</div>
+
+			<div class="content none" id="box6">
+				
+					<p align="center" style="font-size:30px;"><strong>视频投稿</strong></p>
+			
+			<div class="box6">
+				<form>
+				<table align="center">
+					<tr>
+						<td align="right">用户名：</td>
+						<td>
+							<input type="text" name="username" size="5px" />
+						</td>
+					</tr>
+					<tr>
+						<td align="right">作品名称：</td>
+						<td class="ha"> 
+							<input type="text" id="in">
+						</td>
+					</tr>
+					
+					<tr>
+						<td align="right">作品上传：</td>
+						<td>
+							<input type="file" id="file">
+						</td>
+					</tr>
+					<tr>
+						<td align="right">作品简介：</td>
+						<td>
+							<textarea name="message" rows="3" cols="30"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td align="right">是否原创：</td>
+						<td>
+							<input type="radio" name="self" value="yes"/>是
+							<input type="radio" name="no" value="woman"/>否
+						</td>
+					</tr>
+					<tr>
+						<td align="right">是否公开：</td>
+						<td>
+							<input type="radio" name="public" value="yes"/>是
+							<input type="radio" name="public" value="no"/>否
+						</td>
+					</tr>
+				</table>
+
+				<div align="center">
+					<button onclick="test(document.getElementById('in').value)" >提交</button>
+				</div>
+				</form>
+			</div>
+
+				</div>
+
+		</div>
+
+	</div>
+</form>
+</body>
+	<script type="text/javascript" src="navigationBar.js"></script>
+</html>
