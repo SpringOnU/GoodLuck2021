@@ -9,13 +9,8 @@
 <body>
 	<script type="text/javascript">
 		
-		var ref = /[a-zA-Z]/;	// 只要包含a 或者b 或者c 都返回true
-		console.log(ref.test('a'));	// true
-		console.log(ref.test('b'));	// true
-		console.log(ref.test('c'));	// true
-		console.log(ref.test('aa'));	// true
-		console.log(ref.test('abc'));	// true
-		console.log(ref.test('azz'));	// true
+		var ref = /^[abc]{3}$/;
+		console.log(ref.test('aaa'));
 	</script>
 </body>
 </html>
