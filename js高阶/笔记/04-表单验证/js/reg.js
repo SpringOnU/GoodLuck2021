@@ -15,12 +15,13 @@ window.onload = function() {
     regexp(nc, regnc); // 昵称
     regexp(msg, regmsg); // 短信验证
     regexp(pwd, regpwd); // 密码框
+
     // 表单验证的函数
-    function regexp(ele, reg) {
+    function regexp(ele, reg) {     //传递两个参数 一个是传递哪一个元素进行验证 第二个是正则表达式
         ele.onblur = function() {
             if (reg.test(this.value)) {
                 // console.log('正确的');
-                this.nextElementSibling.className = 'success';
+                this.nextElementSibling.className = 'success';      // 下一个元素
                 this.nextElementSibling.innerHTML = '<i class="success_icon"></i> 恭喜您输入正确';
             } else {
                 // console.log('不正确');
