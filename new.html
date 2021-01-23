@@ -10,14 +10,13 @@
 	<textarea name="" id="message"></textarea>	<button>点击</button>
 	<div></div>
 	<script type="text/javascript">
-		
-		var text = document.querySelector('#message');
-		var btn = document.querySelector('button');
-		var div = document.querySelector('div');
-		btn.onclick = function() {
-			div.innerHTML = text.value.replace(/激情|gay/g, '**')
-		}
+		const sum = (...args) => {		// 三个点代表了代表接收了所有的实参
+			
 
+		};
+
+		sum(10, 20);
+		sum(10, 20, 30);
 	</script>
 </body>
 </html>
