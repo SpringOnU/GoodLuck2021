@@ -7,16 +7,17 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
-	<textarea name="" id="message"></textarea>	<button>点击</button>
-	<div></div>
+	<div>1</div>
+	<div>3</div>
+	<div>5</div>
+	<div>7</div>
+	<div>9</div>
+	<div>2</div>
 	<script type="text/javascript">
-		const sum = (...args) => {		// 三个点代表了代表接收了所有的实参
-			
-
-		};
-
-		sum(10, 20);
-		sum(10, 20, 30);
+		var oDivs = document.getElementsByTagName('div');
+		console.log(oDivs);		// 伪数组 图放下面
+		var ary = [...oDivs];
+		console.log(ary);		// 真实数组
 	</script>
 </body>
 </html>
