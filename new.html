@@ -7,17 +7,18 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
-	<div>1</div>
-	<div>3</div>
-	<div>5</div>
-	<div>7</div>
-	<div>9</div>
-	<div>2</div>
+	
 	<script type="text/javascript">
-		var oDivs = document.getElementsByTagName('div');
-		console.log(oDivs);		// 伪数组 图放下面
-		var ary = [...oDivs];
-		console.log(ary);		// 真实数组
+		var ary = [{
+			id: 1,
+			name: '张三'
+		},
+		{
+			id: 2,
+			name: '李四'
+		}];
+		var target = ary.find(item => item.id == 2);
+		console.log(target);		// id: 2 name: "李四"
 	</script>
 </body>
 </html>
