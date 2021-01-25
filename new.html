@@ -9,16 +9,14 @@
 <body>
 	
 	<script type="text/javascript">
-		var ary = [{
-			id: 1,
-			name: '张三'
-		},
-		{
-			id: 2,
-			name: '李四'
-		}];
-		var target = ary.find(item => item.id == 2);
-		console.log(target);		// id: 2 name: "李四"
+		const fn = () => {
+			return `我是fn函数`
+		};
+
+		let html = `我是模板字符串 ${fn()}`;
+
+		console.log(html);		// 我是模板字符串 我是fn函数
+		
 	</script>
 </body>
 </html>
