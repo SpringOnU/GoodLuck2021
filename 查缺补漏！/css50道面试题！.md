@@ -2,11 +2,11 @@
 
 盒子模型就是 元素在网页中的实际占位，有两种：**标准盒子模型**和**IE盒子模型**
 
-1. **标准(W3C)盒子模型(context-box)：**<font color= 'red'>内容content</font>+填充padding+边框border+边界margin
+1. **标准(W3C)盒子模型(`box-sizing:context-box`)：**<font color= 'red'>内容content</font>+填充padding+边框border+边界margin
 
-   宽高height/width指的是 **content** 的宽高
+   宽高height/width指的是 **content** 的宽高 padding+border不会再撑大盒子了
 
-2. **低版本IE盒子模型(border-box)：**<font color= 'red'>内容（content+padding+border）</font>+ 边界margin，
+2. **低版本IE盒子模型(`box-sizing:border-box`)：**<font color= 'red'>内容（content+padding+border）</font>+ 边界margin，
 
    宽高height/width指的是 **content+padding+border** 部分的宽高
 
