@@ -148,9 +148,7 @@ view视图 模板 dom
 
 View-Model 结合
 
-## 3. 事件绑定
-
-### 1). v-on :
+## 3. 事件绑定 v-on :
 
 > https://cn.vuejs.org/v2/api/#v-on
 
@@ -216,7 +214,7 @@ View-Model 结合
         });
 ```
 
-#### (1). 事件修饰符
+### (1). 事件修饰符
 
 + 阻止冒泡`@click.stop`
 
@@ -253,7 +251,7 @@ View-Model 结合
 <a href="http://www.baidu.com" v-on:click.prevent='handle2'>百度</a>	<!-- 阻止跳转 -->	
 ```
 
-#### (2). 按键修饰符
+### (2). 按键修饰符
 
 > https://cn.vuejs.org/v2/guide/events.html#%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6
 
@@ -307,5 +305,15 @@ View-Model 结合
             }
             });
     </script>
+```
+
+## 4. 属性绑定 v-bind
+
+```html
+<a v-bind:href='url'>跳转</a>
+```
+
+```html
+<a :href='url'>跳转</a>
 ```
 
