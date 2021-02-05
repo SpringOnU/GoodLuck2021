@@ -107,5 +107,205 @@
 
 ## 4. v-pre显示原始代码
 
+## 5. v-once只编译一次
 
+后续信息不需要再修改 有助于提高性能
+
+就是在控制器中 使用vm.msg可以改变页面中msg的值 但是如果给他加上v-once就只能是他最初编译出来的 不能再修好了
+
+## 6. 数据响应式 
+
+数据的变化导致页面内容的变化 
+
+# 五、 双向数据绑定
+
+## 1. v-model 双向绑定
+
+```html
+    <div id="app">
+        <div>{{msg}}</div>
+        <div>
+            <input type="text" v-model='msg'>  <!-- 页面影响数据 通过修改input中的值 可以直接影响到上面插值表达式中的值 -->
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+        el:'#app', 
+        data: {
+            msg:'hello'
+        }
+        });
+    </script>
+```
+
+## 2. MVVM（model view View-Model）
+
+model数据
+
+view视图 模板 dom
+
+View-Model 结合
+
+## 3. 事件绑定
+
+### 1). v-on :
+
+> https://cn.vuejs.org/v2/api/#v-on
+
+```html
+<button v-on:click='num++'>{{num}}</button>
+```
+
+```html
+<button @click='num++'>{{num}}</button>
+```
+
+函数形式
+
+```html
+    <div id="app">
+        <div>
+            <button v-on:click='handle'>{{num}}</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+        el:'#app', 
+        data: {
+            num: 0
+        },
+        methods: {
+            handle: function() {
+                this.num++;     // this是vue的实例对象
+            }
+        }
+        });
+    </script>
+```
+
+接收事件对象
+
++ 事件对象必须是参数传递的最后一个，且事件对象的名称必须是`$event`
+
+```html
+    <div id="app">
+        <div>
+            <button v-on:click='handle(123, $event)'>{{num}}</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+        el:'#app', 
+        data: {
+            num: 0
+        },
+        methods: {
+            handle: function(a, event) {
+                console.log(a);     // 123
+                console.log(event.target.tagName);      // BUTTON
+                console.log(event.target.innerHTML);        // 0
+                this.num++;     // this是vue的实例对象
+            }
+        }
+        });
+```
+
+#### (1). 事件修饰符
+
++ 阻止冒泡`@click.stop`
+
+```html
+    <div id="app">
+            <div>{{num}}</div>
+            <div @click='handle0()'>
+                <button @click.stop='handle1()'>点击1</button>
+            </div>
+    </div>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+            var vm = new Vue({
+            el:'#app', 
+            data: {
+                num: 0
+            },
+            methods: {
+                handle0: function() {
+                    this.num++;
+                },
+                handle1: function() {
+
+                }
+            }
+            });
+    </script>
+```
+
++ 阻止默认行为`.prevent`
+
+```html
+<a href="http://www.baidu.com" v-on:click.prevent='handle2'>百度</a>	<!-- 阻止跳转 -->	
+```
+
+#### (2). 按键修饰符
+
+> https://cn.vuejs.org/v2/guide/events.html#%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6
+
++ 回车键 `@keyup.enter`
+
+```html
+    <div id="app">
+        <div>
+            用户名：<input @keyup.enter='handle1' v-model='name'>
+            <button @click='handle1'>点击1</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+        el:'#app', 
+        data: {
+            name: ''
+        },
+        methods: {
+            handle1: function() {
+                console.log(this.name);
+            }
+        }
+        });
+```
+
++ 删除键 `@keyup.delete`
+
++ 自定义按键修饰符 `Vue.config.keys.f1=112`
+
+```html
+    <div id="app">
+            <div>
+                    用户名：<input @keyup='handle1' v-model='name'>
+            </div>
+    </div>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+            var vm = new Vue({
+            el:'#app', 
+            data: {
+                name: ''
+            },
+            methods: {
+                handle1: function(event) {
+                    console.log(event.keyCode);
+                }
+            }
+            });
+    </script>
+```
 

@@ -4,28 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>点我</title>
-    <style>
-        [v-cloak] {
-            display: none;
-        }
-    </style>
 </head>
     <div id="app">
-        <div v-html='msg'></div>	<!-- 1.提供标签用于填充数据 插值表达式--> 
-        <div>{{1+2}}</div>
-        <div>{{msg+'----'+'123'}}</div>
+        <div>
+            用户名：<input @keyup='handle1' v-model='name'>
+        </div>
     </div>
 
-    <script type="text/javascript" src="js/vue.js"></script>	<!-- 2.引入 vue.js 库文件 -->
+    <script type="text/javascript" src="js/vue.js"></script>
     <script type="text/javascript">
-        var vm = new Vue({ // 3.使用 vue语法做功能
+        var vm = new Vue({
         el:'#app', 
-            // el:告诉vue,你要把这个数据填充到什么位置
-            // #app:严格的id选择器
-        data: {  // data:用于提供数据
-            msg:'<h1>html</h1>'
+        data: {
+            name: ''
+        },
+        methods: {
+            handle1: function(event) {
+                console.log(event.keyCode);
+            }
         }
-        }); //用于存储vue的实例
+        });
     </script>
     
 </body>
