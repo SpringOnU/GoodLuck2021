@@ -1,4 +1,4 @@
-## 一、Vue => 渐进式 javascript 框架
+## 一、Vue => 渐进式 js 框架
 2. 官网：[https://cn.vuejs.org/v2/guide/]()  or [https://vuejs.bootcss.com/guide/]()
 2. 优点：
    + 易用（熟悉HTML、CSS、js知识后，可快速上手）
@@ -315,5 +315,243 @@ View-Model 结合
 
 ```html
 <a :href='url'>跳转</a>
+```
+
+ 双向数据绑定的三种不同形式
+
+```html
+            <input type="text" v-bind:value="msg" v-on:input="handle"> 
+            <!-- handel：function(event) {
+                this.msg = event.target.value;
+            } -->
+            <input type="text" v-bind:value="msg" v-on:input="msg=$event.target.value">
+            <input type="text" v-model="msg">
+```
+
+## 5. 样式绑定 v-bind
+
+### (1). class
+
+对象
+
+```html
+    <style>
+        .active {
+            height: 100px;
+            width: 150px;
+            background-color:blueviolet;
+        }
+        .error {
+            border:coral 2px solid;
+        }
+    </style>
+</head>
+    <div id="app">
+        <div>
+            <div :class="{active: isActive, error: isError}"></div>
+            <button @click="handle">点击</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+        el:'#app', 
+        data: {
+            isActive: true,
+            isError: true
+        },
+        methods: {
+            handle: function() {
+                this.isActive = !this.isActive;     // 使isActive的值在true flase之间跳动
+                this.isError = !this.isError;
+            }
+        }
+        });
+    </script>
+```
+
+数组
+
+```html
+    <style>
+        .active {
+            height: 100px;
+            width: 150px;
+            background-color:blueviolet;
+        }
+        .error {
+            border:coral 2px solid;
+        }
+    </style>
+</head>
+    <div id="app">
+        <div>
+            <div :class="[activeClass, errorClass]"></div>
+            <button @click="handle">点击</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+        el:'#app', 
+        data: {
+            activeClass: 'active',
+            errorClass: 'error'
+        },
+        methods: {
+            handle: function() {
+                this.activeClass = '',
+                this.errorClass = ''
+            }
+        }
+        });
+    </script>
+```
+
++ 二者可以结合
+
++ 可以简化操作 
+
+  ` arrClasses: ['active', 'error']`
+
+  ```vue
+  arrClasses: {
+  	active: true,
+  	error: true
+  }
+  ```
+
++ 默认class会保留
+
+### (2). **style**
+
+```html
+<div v-bind:style='{border: borderStyle, width: widthStyle, height: heightStyle}'></div>
+```
+
+```html
+<div id="app">
+    <div v-bind:style='objStyles'></div> <!-- 对象 -->
+    <div v-bind:style='[objStyles, overrideStyles]'></div> <!-- 数组 -->
+    <button v-on:click='handle'>切换</button>
+  </div>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript">
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        borderStyle: '1px solid blue',
+        widthStyle: '100px',
+        heightStyle: '200px',
+        objStyles: {
+          border: '1px solid green',
+          width: '200px',
+          height: '100px'
+        },
+        overrideStyles: {
+          border: '5px solid orange',
+          backgroundColor: 'blue'
+        }
+      },
+      methods: {
+        handle: function(){
+          this.heightStyle = '100px';
+          this.objStyles.width = '100px';
+        }
+      }
+    });
+  </script>
+```
+
+# 六、分支循环结构
+
+## 1. v-if 如果
+
+```html
+    <div v-if=' score >= 90 '>优秀</div>
+    <div v-else-if='score<90 && score>=80'>一般</div>
+    <div v-else>较差</div>
+```
+
+## 2. v-show 是否展示
+
+即使没有显示但也渲染到了页面
+
+> 变化频繁选择这个
+
+```html
+<div v-show='flag'>较差</div>   <!-- flag: true -->
+```
+
+## 3. v-for 遍历
+
+```html
+  <div id="app">
+    <div>水果列表</div>
+    <ul>
+        <li v-for='item in fruits'>{{item}}</li>    <!-- 关键字 in 属性名 -->
+        <li v-for='(item, index) in fruits'>{{item + '---' + index}}</li>   <!-- 关键字+索引 in 属性名 -->
+        <li v-for='item in myFruits'>
+            <span>{{item.ename}}</span>
+            <span>{{item.cname}}</span>
+        </li>
+    </ul>
+  </div>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript">
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        fruits: ['apple', 'banana', 'orange'],
+        myFruits: [{
+            ename: 'apple',
+            cname: '苹果'
+        },
+        {
+            ename: 'banana',
+            cname: '香蕉'
+        },
+        {
+            ename: 'orange',
+            cname: '橘子'
+        },]
+      }
+    });
+  </script>
+```
+
+![](E:\EPInterest\vue\DAY-1\img\屏幕截图 2021-02-06 231310.jpg)
+
+## 4. key 加唯一属性id
+
+给`data`里面每个对象加`id`
+
+再用`:key = item.id`
+
+## 5.v-for v-if结合
+
+```html
+  <div id="app">
+    <div v-for='(v, k, i) in obj'>{{v + '---' + k + '---' + i}}</div>
+  </div>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript">
+    
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        obj: {
+            uname: 'x52',
+            age: '20',
+            sex: 'male'
+        }
+      }
+    });
+```
+
+```html
+    <div v-for='(v, k, i) in obj' v-if='v == 13'>{{v + '---' + k + '---' + i}}</div>
 ```
 
