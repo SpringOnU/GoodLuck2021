@@ -20,7 +20,7 @@
 </head>
 <body>
   <div id="app">
-    <form action="http://itcast.cn">
+    <form action="http://itcast.cn">    <!-- 提交以后就会跳转到这个网址 -->
       <div>
         <span>姓名：</span>
         <span>
@@ -30,24 +30,24 @@
       <div>
         <span>性别：</span>
         <span>
-          <input type="radio" id="male" value="1" v-model='gender'>
+          <input type="radio" id="male">
           <label for="male">男</label>
-          <input type="radio" id="female" value="2" v-model='gender'>
+          <input type="radio" id="female">
           <label for="female">女</label>
         </span>
       </div>
       <div>
         <span>爱好：</span>
-        <input type="checkbox" id="ball" value="1" v-model='hobby'>
+        <input type="checkbox" id="ball">
         <label for="ball">篮球</label>
-        <input type="checkbox" id="sing" value="2" v-model='hobby'>
+        <input type="checkbox" id="sing">
         <label for="sing">唱歌</label>
-        <input type="checkbox" id="code" value="3" v-model='hobby'>
+        <input type="checkbox" id="code">
         <label for="code">写代码</label>
       </div>
       <div>
         <span>职业：</span>
-        <select v-model='occupation' multiple>
+        <select>
           <option value="0">请选择职业...</option>
           <option value="1">教师</option>
           <option value="2">软件工程师</option>
@@ -59,7 +59,7 @@
         <textarea v-model='desc'></textarea>
       </div>
       <div>
-        <input type="submit" value="提交" @click.prevent='handle'>
+        <input type="submit" value="提交" @click.prevent='handle'>      <!-- .prevent阻止跳转页面 -->
       </div>
     </form>
   </div>
@@ -74,9 +74,9 @@
         uname: 'lisi'
       },
       methods: {
-        handle: function(){
-
-        }
+          handle: function() {
+              console.log(this.uname);
+          }
       }
     });
   </script>

@@ -71,10 +71,20 @@
     var vm = new Vue({
       el: '#app',
       data: {
-        uname: 'lisi'
+        uname: 'lisi',
+        gender: 2,
+        hobby: ['2','3'],
+        // occupation: 3
+        occupation: ['2','3'],
+        desc: 'nihao'
       },
       methods: {
         handle: function(){
+          // console.log(this.uname)
+          // console.log(this.gender)
+          // console.log(this.hobby.toString())
+          // console.log(this.occupation)
+          console.log(this.desc)
 
         }
       }
