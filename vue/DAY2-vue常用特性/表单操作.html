@@ -30,24 +30,24 @@
       <div>
         <span>性别：</span>
         <span>
-          <input type="radio" id="male">
+          <input type="radio" id="male" value='1' v-model='gender'>
           <label for="male">男</label>
-          <input type="radio" id="female">
+          <input type="radio" id="female" value='2' v-model='gender'>
           <label for="female">女</label>
         </span>
       </div>
       <div>
         <span>爱好：</span>
-        <input type="checkbox" id="ball">
+        <input type="checkbox" id="ball" value='1' v-model='hobby'> <!-- v-model放在这里是多选 -->
         <label for="ball">篮球</label>
-        <input type="checkbox" id="sing">
+        <input type="checkbox" id="sing" value='2' v-model='hobby'>
         <label for="sing">唱歌</label>
-        <input type="checkbox" id="code">
+        <input type="checkbox" id="code" value='3' v-model='hobby'>
         <label for="code">写代码</label>
       </div>
       <div>
         <span>职业：</span>
-        <select>
+        <select v-model='occupation' multiple='true'>
           <option value="0">请选择职业...</option>
           <option value="1">教师</option>
           <option value="2">软件工程师</option>
@@ -71,11 +71,15 @@
     var vm = new Vue({
       el: '#app',
       data: {
-        uname: 'lisi'
+        uname: 'lisi',
+        gender: 1,
+        hobby: ["1", "2"],
+        occupation: [""],
+        desc: "hi"
       },
       methods: {
           handle: function() {
-              console.log(this.uname);
+              console.log(this.desc);
           }
       }
     });
