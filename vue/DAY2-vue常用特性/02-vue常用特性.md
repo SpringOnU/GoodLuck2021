@@ -102,3 +102,53 @@ https://cn.vuejs.org/v2/guide/custom-directive.html
 
 计算和方法 区别：是否缓存 同样的内容控制台只输出一次
 
+# 四、侦听器
+
+数据变化较大时执行异步或开销较大
+
+```html
+  <div id="app">
+    <div>
+      <span>名：</span>
+      <span>
+        <input type="text" v-model='firstName'>
+      </span>
+    </div>
+    <div>
+      <span>姓：</span>
+      <span>
+        <input type="text" v-model='lastName'>
+      </span>
+    </div>
+    <div>{{fullName}}</div>
+  </div>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript">
+    /*
+      侦听器
+    */
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        firstName: 'Jim',
+        lastName: 'Green',
+        // fullName: 'Jim Green'
+      },
+      computed: { // 计算属性
+        fullName: function() {
+          return this.firstName + ' ' + this.lastName;
+        }
+      },
+      watch: {  //侦听器
+        // firstName: function(val) {    // firstName：第一个属性名的名字
+        //   this.fullName = val + ' ' + this.lastName;
+        // },
+        // lastName: function(val) {    // lastName：第一个属性名的名字
+        //   this.fullName = this.firstName + ' ' + val;
+        // }
+
+      }
+    });
+  </script>
+```
+

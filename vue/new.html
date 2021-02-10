@@ -3,26 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <style type="text/css">
-
-  </style>
 </head>
 <body>
   <div id="app">
-    <div>{{msg}}</div>
-    <div>{{reverseString}}</div>
+    <div>
+      <span>名：</span>
+      <span>
+        <input type="text" v-model='firstName'>
+      </span>
+    </div>
+    <div>
+      <span>姓：</span>
+      <span>
+        <input type="text" v-model='lastName'>
+      </span>
+    </div>
+    <div>{{fullName}}</div>
   </div>
   <script type="text/javascript" src="js/vue.js"></script>
   <script type="text/javascript">
+    /*
+      侦听器
+    */
     var vm = new Vue({
       el: '#app',
       data: {
-        msg: 'hello'
+        firstName: 'Jim',
+        lastName: 'Green',
+        // fullName: 'Jim Green'
       },
-      computed: {
-        reverseString: function(){
-          return this.msg.split('').reverse().join('');
+      computed: { // 计算属性
+        fullName: function() {
+          return this.firstName + ' ' + this.lastName;
         }
+      },
+      watch: {  //侦听器
+        // firstName: function(val) {    // firstName：第一个属性名的名字
+        //   this.fullName = val + ' ' + this.lastName;
+        // },
+        // lastName: function(val) {    // lastName：第一个属性名的名字
+        //   this.fullName = this.firstName + ' ' + val;
+        // }
+
       }
     });
   </script>
