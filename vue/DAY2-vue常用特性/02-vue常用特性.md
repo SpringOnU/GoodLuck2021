@@ -12,7 +12,7 @@ v-model.trim
 
 v-model.lazy
 
-# 二、 自定义指令
+# 二、 自定义指令 directive
 
 https://cn.vuejs.org/v2/guide/custom-directive.html
 
@@ -76,7 +76,7 @@ https://cn.vuejs.org/v2/guide/custom-directive.html
       }
 ```
 
-# 三、计算属性
+# 三、计算属性 computed
 
 // computed
 
@@ -102,7 +102,7 @@ https://cn.vuejs.org/v2/guide/custom-directive.html
 
 计算和方法 区别：是否缓存 同样的内容控制台只输出一次
 
-# 四、侦听器
+# 四、侦听器 watch
 
 数据变化较大时执行异步或开销较大
 
@@ -150,5 +150,83 @@ https://cn.vuejs.org/v2/guide/custom-directive.html
       }
     });
   </script>
+```
+
+> 案例：侦听器应用
+
+# 五、过滤器 filter
+
+```html
+  <div id="app">
+    <input type="text" v-model='msg'>
+    <div>{{msg | upper}}</div>
+  </div>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript">
+    Vue.filter('upper', function(val) {
+      return val.charAt(0).toUpperCase() + val.slice(1)
+      // charAt(0) 选中第一个字符 toUpperCase 变成大写 slice(1) 从第二个字符开始到最后
+    })
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        msg: ''
+      }
+    })
+```
+
+```html
+<div>{{msg | upper}}</div>
+<div>{{msg | upper | lower }}</div>
+<div v-bind:id = "id | format"></div>
+    <div :abc = "msg | upper">123</div> <!-- abc自定义 -- >
+```
+
+另一种单独提出来
+
+```js
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        msg: ''
+      },
+      filters: {
+        upper: function(val) {
+          return val.charAt(0).toUpperCase() + val.slice(1);
+        }
+      }
+    })
+```
+
+
+
+带参数
+
+> 使用过滤器格式化日期
+
+```html
+<!-- 简版 -->    
+
+	<div id="app">
+        <div>{{date | format('yyyy-MM-dd')}}</div>
+    </div>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+    Vue.filter('format',  function(value, arg) {
+        // console.log(arg);
+        // return value;
+        if(arg == 'yyyy-MM-dd'){
+            var ret = '';
+            ret += value.getFullYear() + '-' + value.getMonth() + '-' +value.getDate();
+            return ret;
+        }
+    })
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            date: new Date()
+        }
+    });
+    </script>
 ```
 
