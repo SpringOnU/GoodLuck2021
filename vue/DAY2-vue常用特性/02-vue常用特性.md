@@ -16,7 +16,7 @@ v-model.lazy
 
 https://cn.vuejs.org/v2/guide/custom-directive.html
 
-// 获取焦点
+## 1.  获取焦点
 
 ```js
     Vue.directive('focus', {  
