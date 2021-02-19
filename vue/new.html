@@ -5,27 +5,37 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="app">
-    <input type="text" v-model='msg'>
-    <div>{{msg | upper}}</div>
-  </div>
-  <script type="text/javascript" src="js/vue.js"></script>
   <script type="text/javascript">
-    // Vue.filter('upper', function(val) {
-    //   return val.charAt(0).toUpperCase() + val.slice(1)
-    //   // charAt(0) 选中第一个字符 toUpperCase 变成大写 slice(1) 从第二个字符开始到最后
-    // })
-    var vm = new Vue({
-      el: '#app',
-      data: {
-        msg: ''
-      },
-      filters: {
-        upper: function(val) {
-          return val.charAt(0).toUpperCase() + val.slice(1);
-        }
-      }
-    })
+    function queryData(url) {
+      var p = new Promise(function(resolve, reject) {
+        var xhr = new XMLHttpRequest();     
+        // XMLHttpRequest 对象用于在后台与服务器交换数据。
+        /* XMLHttpRequest能够：
+        在不重新加载页面的情况下更新网页
+        在页面已加载后从服务器请求数据
+        在页面已加载后从服务器接收数据
+        在后台向服务器发送数据 */
+        xhr.onreadystatechange = function() { 
+        // 在 onreadystatechange 事件中，我们规定当服务器响应已做好被处理的准备时所执行的任务。
+          if(xhr.readyState != 4) return; // 不作处理
+          if(xhr.readyState == 4 && xhr.status == 200) {
+            // 正常情况
+            resolve(xhr.responseText); // 拿到服务器响应数据
+          }else{
+            reject('服务器错误');
+          }
+        };
+        xhr.open('get', url); // 准备发动前的参数
+        xhr.send(null);
+      });
+      return p;
+    }
+    queryData('http://localhost:3000/data')
+      .then(function(data){
+        console.log(data);
+      }, function(info) {
+        console.log(info);
+      });
   </script>
 </body>
 </html>

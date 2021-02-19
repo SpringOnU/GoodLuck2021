@@ -1,10 +1,10 @@
-###今日目标
+### 今日目标
 1.初始化项目 
 2.基于Vue技术栈进行项目开发
 3.使用Vue的第三方组件进行项目开发
 4.理解前后端分离开发模式
 
-###1.电商业务概述
+### 1.电商业务概述
 客户使用的业务服务：PC端，小程序，移动web，移动app
 管理员使用的业务服务：PC后台管理端。
 PC后台管理端的功能：管理用户账号（登录，退出，用户管理，权限管理），商品管理（商品分类，分类参数，商品信息，订单），数据统计
@@ -14,7 +14,7 @@ PC后台管理端的功能：管理用户账号（登录，退出，用户管理
 前端技术栈:Vue,Vue-Router,Element-UI,Axios,Echarts
 后端技术栈：Node.js,Express,Jwt(模拟session),Mysql,Sequelize(操作数据库的框架)
 
-###2.项目初始化
+### 2.项目初始化
 A.安装Vue脚手架
 B.通过脚手架创建项目
 C.配置路由
@@ -23,7 +23,7 @@ E.配置Axios：在依赖中安装,搜索axios(运行依赖)
 F.初始化git仓库
 G.将本地项目托管到github或者码云中
 
-###3.码云相关操作
+### 3.码云相关操作
 A.注册登录码云账号
 ![](images/注册码云.jpg)
 
@@ -61,8 +61,7 @@ I.进行git配置：
 打开项目所在位置的终端，进行git仓库关联
 ![](images/项目终端执行关联.jpg)
 
-
-###4.配置后台项目
+###  4.配置后台项目
 A.安装phpStudy并导入mysql数据库数据
 ![](images/phpStudy.jpg)
 
@@ -73,7 +72,7 @@ B.安装nodeJS，配置后台项目,从终端打开后台项目vue_api_server
 C.使用postman测试api接口
 ![](images/postman.jpg)
 
-###5.实现登录功能
+### 5.实现登录功能
 A.登录状态保持
 如果服务器和客户端同源，建议可以使用cookie或者session来保持登录状态
 如果客户端和服务器跨域了，建议使用token进行维持登录状态。
@@ -376,10 +375,10 @@ import {Message} from 'element-ui'
 进行全局挂载：Vue.prototype.$message = Message;
 在login.vue组件中编写弹窗代码：this.$message.error('登录失败')
 
-
-###6.登录成功之后的操作
+### 6.登录成功之后的操作
 A.登录成功之后，需要将后台返回的token保存到sessionStorage中
 操作完毕之后，需要跳转到/home
+
 ```
 login() {
       //点击登录的时候先调用validate方法验证表单内容是否有误
@@ -491,12 +490,13 @@ export default {
 }
 ```
 
-###补充
+### 补充
 A.处理ESLint警告
 打开脚手架面板，查看警告信息
 [图片]
 默认情况下，ESLint和vscode格式化工具有冲突，需要添加配置文件解决冲突。
 在项目根目录添加 .prettierrc 文件
+
 ```
 {
     "semi":false,
