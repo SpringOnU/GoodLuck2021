@@ -355,6 +355,7 @@ export default {
 
       // 在展示对话框之前，获取所有角色的列表
       const { data: res } = await this.$http.get('roles')
+      console.log(res)
       if (res.meta.status !== 200) {
         return this.$message.error('获取角色列表失败！')
       }
@@ -384,6 +385,7 @@ export default {
       this.getUserList()
       this.setRoleDialogVisible = false
     },
+
     // 监听分配角色对话框的关闭事件
     setRoleDialogClosed() {
       this.selectedRoleId = ''
