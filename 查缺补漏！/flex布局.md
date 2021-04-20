@@ -17,7 +17,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 设为 Flex 布局以后，子元素的`float`、`clear`和`vertical-align`属性将失效。
 
-<img src="E:\EPInterest\查缺补漏！\img\bg2015071004.png"  />
+[![cH0tjf.png](https://z3.ax1x.com/2021/04/20/cH0tjf.png)](https://imgtu.com/i/cH0tjf)
 
 # 容器属性
 
@@ -29,7 +29,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 }
 ```
 
-![](E:\EPInterest\查缺补漏！\img\bg2015071005.png)
+[![cH0Uu8.png](https://z3.ax1x.com/2021/04/20/cH0Uu8.png)](https://imgtu.com/i/cH0Uu8)
 
 >**`row`（默认值）：主轴为水平方向，起点在左端。**
 >
@@ -47,11 +47,11 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 }
 ```
 
-![](E:\EPInterest\查缺补漏！\img\bg2015071007.png)
+[![cH00EQ.png](https://z3.ax1x.com/2021/04/20/cH00EQ.png)](https://imgtu.com/i/cH00EQ)
 
-![](E:\EPInterest\查缺补漏！\img\bg2015071008.jpg)
+[![cH0D4s.jpg](https://z3.ax1x.com/2021/04/20/cH0D4s.jpg)](https://imgtu.com/i/cH0D4s)
 
-![](E:\EPInterest\查缺补漏！\img\bg2015071009.jpg)
+[![cH0sCn.jpg](https://z3.ax1x.com/2021/04/20/cH0sCn.jpg)](https://imgtu.com/i/cH0sCn)
 
 # 3. **flex-flow**  `flex-direction属性和flex-wrap属性的简写`
 
@@ -65,7 +65,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 # 4. **justify-content**`在主轴上的对齐方式。`
 
-![](E:\EPInterest\查缺补漏！\img\bg2015071010.png)
+[![cH0y3q.png](https://z3.ax1x.com/2021/04/20/cH0y3q.png)](https://imgtu.com/i/cH0y3q)
 
 # 5. **align-items**`在交叉轴上如何对齐`
 
@@ -75,7 +75,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 }
 ```
 
-![](E:\EPInterest\查缺补漏！\img\bg2015071011.png)
+[![cH02uT.png](https://z3.ax1x.com/2021/04/20/cH02uT.png)](https://imgtu.com/i/cH02uT)
 
 # 6. **align-content** `属性定义了多根轴线的对齐方式`
 
@@ -87,7 +87,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 }
 ```
 
-![](E:\EPInterest\查缺补漏！\img\bg2015071012.png)
+[![cH06g0.png](https://z3.ax1x.com/2021/04/20/cH06g0.png)](https://imgtu.com/i/cH06g0)
 
 # 项目属性
 
@@ -103,7 +103,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 }
 ```
 
-![](E:\EPInterest\查缺补漏！\img\bg2015071013.png)
+[![cH0cvV.png](https://z3.ax1x.com/2021/04/20/cH0cvV.png)](https://imgtu.com/i/cH0cvV)
 
 # 2. **flex-grow**`放大比例`
 
@@ -115,7 +115,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 }
 ```
 
-![](E:\EPInterest\查缺补漏！\img\bg2015071014.png)
+[![cH0RDU.png](https://z3.ax1x.com/2021/04/20/cH0RDU.png)](https://imgtu.com/i/cH0RDU)
 
 如果所有项目的`flex-grow`属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的`flex-grow`属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
 
@@ -129,7 +129,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 }
 ```
 
-![](E:\EPInterest\查缺补漏！\img\bg2015071015.jpg)
+[![cH0WbF.jpg](https://z3.ax1x.com/2021/04/20/cH0WbF.jpg)](https://imgtu.com/i/cH0WbF)
 
 如果所有项目的`flex-shrink`属性都为1，当空间不足时，都将等比例缩小。如果一个项目的`flex-shrink`属性为0，其他项目都为1，则空间不足时，前者不缩小。
 
@@ -165,4 +165,4 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 }
 ```
 
-![](E:\EPInterest\查缺补漏！\img\bg2015071016.png)
+[![cH0hE4.png](https://z3.ax1x.com/2021/04/20/cH0hE4.png)](https://imgtu.com/i/cH0hE4)
